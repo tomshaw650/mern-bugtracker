@@ -5,14 +5,14 @@ const router = express.Router();
 const Bug = require('../models/bug');
 
 // get request, return all the data from, shows id and action to client
-router.get('/todos', (req, res, next) => {
+router.get('/bugs', (req, res, next) => {
   Bug.find({}, 'action')
   .then((data) => res.json(data))
   .catch(next);
 }); 
 
 // post request, creates a bug populated by the required fields
-router.post('/todos', (req, res, next) => {
+router.post('/bugs', (req, res, next) => {
   if (req.body.action) {
     Bug.create(req.body)
     .then((data) => res.json(data))
@@ -25,7 +25,7 @@ router.post('/todos', (req, res, next) => {
 });
 
 // delete request, removes the bug based via the primary key (ID)
-router.delete('/todos/:id', (req, res, next) => {
+router.delete('/bugs/:id', (req, res, next) => {
   Bug.findOneAndDelete({ _id: req.params.id })
   .then((data) => res.json(data))
   .catch(next);
