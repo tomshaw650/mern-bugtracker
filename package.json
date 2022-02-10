@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/tomshaw650/mern-bugtracker/issues"
   },
-  "homepage": "https://github.com/tomshaw650/mern-bugtracker#readme"
+  "homepage": "https://github.com/tomshaw650/mern-bugtracker#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
