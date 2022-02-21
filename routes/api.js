@@ -11,7 +11,7 @@ router.get('/bugs', (req, res, next) => {
   .catch(next);
 }); 
 
-// post request, creates a bug populated by the required fields
+// post request, creates a bug populated by the required field(s)
 router.post('/bugs', (req, res, next) => {
   if (req.body.action) {
     Bug.create(req.body)
