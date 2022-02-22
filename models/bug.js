@@ -10,11 +10,9 @@ const bugSchema = new Schema({
     description: String,
     priority: String,
     done: Boolean,
-    },
-  }, {
-  versionKey: false
+  },
 });
 
-const Bug = mongoose.model('todo', bugSchema);
+const Bug = mongoose.model('bug', bugSchema);
 
 module.exports = Bug;
