@@ -15,6 +15,6 @@ const bugSchema = new Schema({
   versionKey: false
 });
 
-const Bug = mongoose.model('todo', bugSchema);
+const Bug = mongoose.model('bug', bugSchema);
 
 module.exports = Bug;
