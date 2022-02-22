@@ -4,17 +4,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // schema for bug
-const bugSchema = new Schema({
+const BugSchema = new Schema({
   action: {
-    title: String,
-    description: String,
-    priority: String,
-    done: Boolean,
-    },
-  }, {
-  versionKey: false
+    type: String,
+    required: [true, 'The bug name is required'],
+  },
 });
 
-const Bug = mongoose.model('bug', bugSchema);
+const Bug = mongoose.model('bug', BugSchema);
 
 module.exports = Bug;
