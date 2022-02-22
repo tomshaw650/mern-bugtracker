@@ -6,8 +6,10 @@ const Schema = mongoose.Schema;
 // schema for bug
 const bugSchema = new Schema({
   action: {
-    type: String,
-    required: [true, 'The bug title is required'],
+    title: String,
+    description: String,
+    priority: String,
+    done: Boolean,
   },
 });
 
